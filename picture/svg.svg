@@ -1,0 +1,11 @@
+<svg width="154" height="24" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="12" id="svg_1" y="18.33349" x="92.99998" stroke-width="0" stroke="#000" fill="white">AI search</text>
+  <rect id="svg_2" height="14" width="24" y="5.33349" x="4.99999" stroke="#000" fill="red"/>
+  <rect id="svg_3" height="14" width="24" y="5.33349" x="23.99999" stroke="#000" fill="green"/>
+  <rect id="svg_4" height="14" width="24" y="5.33349" x="46.99999" stroke="#000" fill="blue"/>
+  <rect id="svg_5" height="14" width="24" y="5.33349" x="64.99999" stroke="#000" fill="yellow"/>
+ </g>
+</svg>

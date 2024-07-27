@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <title>Resume</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <h1 class="rainbow-text">Resume</h1>
+            <div id="center_square">
+                <h2>Huang Qingchuan</h2>
+                <el-card style="max-width: 480px">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>AI工程师</h4>
+                        </div>
+                    </template>
+                    <p class="text item">编写AI智能体</p>
+                    <p class="text item">提示词工程</p>
+                    <p class="text item">AI大模型调参</p>
+                </el-card>
+                <el-card style="max-width: 480px">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>Python工程师</h4>
+                        </div>
+                    </template>
+                    <p class="text item">Python AI大模型</p>
+                    <p class="text item">Python 机器学习</p>
+                    <p class="text item">Python 统计学</p>
+                    <p class="text item">Python 土木工程</p>
+                </el-card>
+                <el-card style="max-width: 480px">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>前端工程师</h4>
+                        </div>
+                    </template>
+                    <p class="text item">HTML</p>
+                    <p class="text item">CSS</p>
+                    <p class="text item">JS</p>
+                    <p class="text item">Python动态网页</p>
+                </el-card>
+                <h4>Skills</h4>
+                <el-card style="max-width: 480px">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>AI智能体开发</h4>
+                        </div>
+                    </template>
+                    <p class="text item">OpenAI</p>
+                    <p class="text item">LLAMA</p>
+                    <p class="text item">WENXIN YIYAN</p>
+                    <p class="text item">TONGYI</p>
+                </el-card>
+                <el-card style="max-width: 480px">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>科学计算软件开发</h4>
+                        </div>
+                    </template>
+                    <p class="text item">NumPy</p>
+                    <p class="text item">SciPy</p>
+                    <p class="text item">Scikit-learn</p>
+                    <p class="text item">Matplotlib</p>
+                </el-card>
+                <el-card style="max-width: 480px">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>前端开发</h4>
+                        </div>
+                    </template>
+                    <p class="text item">Vue</p>
+                    <p class="text item">Element-Plus</p>
+                    <p class="text item">Axios</p>
+                    <p class="text item">Prettify</p>
+                    <p class="text item">Three.js</p>
+                </el-card>
+                <h4>Learning Experience</h4>
+                <el-card style="max-width: 480px">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>Fuzhou University</h4>
+                        </div>
+                    </template>
+                    <p class="text item">2020-2024</p>
+                    <p class="text item">China</p>
+                </el-card>
+                <el-card style="max-width: 480px" v-show="false">
+                    <template #header>
+                        <div class="card-header">
+                            <h4>Coventry University</h4>
+                        </div>
+                    </template>
+                    <p class="text item">2024-2025</p>
+                    <p class="text item">UK</p>
+                </el-card>
+                <h4 v-show="false">Working Experience</h4>
+                <h4>Links</h4>
+                <ol>
+                    <li> <el-button link style="color: #1196dd;" @click="goTo('./ai_agent.html')">AI Agent
+                            Website</el-button></el-col>
+                    </li>
+                    <li> <el-button link style="color: #1196dd;" @click="goTo('./ai_search.html')">AI Search
+                            Website</el-button></el-col>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    goTo(target) {
+                        window.open(target, '_blank');
+                    }
+                };
+            },
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('picture/bg1.png');
+            background-position: bottom;
+            background-repeat: repeat-y;
+            background-size: cover;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .rainbow-text {
+            display: inline-block;
+            font-size: 3em;
+            background-image: -webkit-linear-gradient(90deg, red, orange, yellow, green);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 5s ease-in-out infinite;
+        }
+    </style>
+</body>
+
+</html>

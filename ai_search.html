@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <title>AI Search</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <div id="virtual_square">
+            <div id="title_bar">
+
+                <el-row :gutter="60">
+                    <el-col :span="6">
+                        <h1 class="logo_cont" aria-labelledby="bLogo"><svg width="154" height="24"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <g>
+                                    <title>Layer 1</title>
+                                    <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP"
+                                        font-size="12" id="svg_1" y="18.33349" x="92.99998" stroke-width="0"
+                                        stroke="#000" fill="white">AI search</text>
+                                    <rect id="svg_2" height="14" width="24" y="5.33349" x="4.99999" stroke="#000"
+                                        fill="red" />
+                                    <rect id="svg_3" height="14" width="24" y="5.33349" x="23.99999" stroke="#000"
+                                        fill="green" />
+                                    <rect id="svg_4" height="14" width="24" y="5.33349" x="46.99999" stroke="#000"
+                                        fill="blue" />
+                                    <rect id="svg_5" height="14" width="24" y="5.33349" x="64.99999" stroke="#000"
+                                        fill="yellow" />
+                                </g>
+                            </svg></h1>
+                    </el-col>
+                    <el-col :span="2" class="search_toolbar_background">
+                        <el-button link class="search_toolbar_text">AI生图</el-button></el-col>
+                    <el-col :span="2" class="search_toolbar_background">
+                        <el-button link class="search_toolbar_text">AI视频</el-button></el-col>
+                    <el-col :span="2" class="search_toolbar_background">
+                        <el-button link class="search_toolbar_text">AI翻译</el-button></el-col>
+                    <el-col :span="2" class="search_toolbar_background">
+                        <el-button link class="search_toolbar_text">AI智能体</el-button></el-col>
+                </el-row>
+            </div>
+            <div id="center_square">
+                <el-input class="full-width" v-model="input" placeholder="请输入搜索内容"></el-input>
+                <div>&nbsp;</div>
+                <el-button class="full-width" type="primary" plain>搜索</el-button>
+
+            </div>
+
+        </div>
+        <script>
+            const App = {
+                data() {
+                    return {
+                        message: "Hello Element Plus",
+                    };
+                },
+            };
+            const app = Vue.createApp(App);
+            app.use(ElementPlus);
+            app.mount("#app");
+        </script>
+        <style>
+            .search_toolbar_text {
+                margin-top: 26px;
+            }
+
+            .search_toolbar_background {
+                background-color: #ffffffa1;
+            }
+
+            .el-row {
+                margin-bottom: 20px;
+            }
+
+            .el-row:last-child {
+                margin-bottom: 0;
+            }
+
+            .el-col {
+                border-radius: 4px;
+            }
+
+            .grid-content {
+                border-radius: 4px;
+                min-height: 36px;
+            }
+
+            #virtual_square {
+
+                display: flex;
+                flex-direction: column;
+                /* 水平居中 */
+                align-items: center;
+                /* 垂直居中 */
+                background-image: url('picture/bg2.png');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+
+            }
+
+            .logo_cont {
+                height: 24px;
+                width: 154px;
+                display: inline-block;
+
+            }
+
+            .el-button .is-link {
+                margin-top: 10px;
+                height: 24px;
+                width: 154px;
+                display: inline-block;
+
+            }
+
+            #title_bar {
+                align-items: start;
+                text-align: end;
+                width: 90vw;
+            }
+
+            #center_square {
+                padding: 36px;
+                width: 800px;
+                position: relative;
+
+                border-radius: 10px;
+            }
+
+            .full-width {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .el-input__inner {
+                border-radius: 10px;
+                /* 你可以根据需要更改这个值 */
+            }
+
+            body {
+                margin: 0px;
+            }
+        </style>
+</body>
+
+</html>
