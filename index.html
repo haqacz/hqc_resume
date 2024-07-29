@@ -17,7 +17,7 @@
             <h1 class="rainbow-text">Resume</h1>
             <div id="center_square">
                 <h2>Huang Qingchuan</h2>
-                <el-card style="max-width: 480px">
+                <el-card style="max-width: 740px">
                     <template #header>
                         <div class="card-header">
                             <h4>AI工程师</h4>
@@ -27,7 +27,7 @@
                     <p class="text item">提示词工程</p>
                     <p class="text item">AI大模型调参</p>
                 </el-card>
-                <el-card style="max-width: 480px">
+                <el-card style="max-width: 740px">
                     <template #header>
                         <div class="card-header">
                             <h4>Python工程师</h4>
@@ -38,7 +38,7 @@
                     <p class="text item">Python 统计学</p>
                     <p class="text item">Python 土木工程</p>
                 </el-card>
-                <el-card style="max-width: 480px">
+                <el-card style="max-width: 740px">
                     <template #header>
                         <div class="card-header">
                             <h4>前端工程师</h4>
@@ -49,8 +49,9 @@
                     <p class="text item">JS</p>
                     <p class="text item">Python动态网页</p>
                 </el-card>
+                <el-divider></el-divider>
                 <h4>Skills</h4>
-                <el-card style="max-width: 480px">
+                <el-card style="max-width: 740px">
                     <template #header>
                         <div class="card-header">
                             <h4>AI智能体开发</h4>
@@ -61,7 +62,7 @@
                     <p class="text item">WENXIN YIYAN</p>
                     <p class="text item">TONGYI</p>
                 </el-card>
-                <el-card style="max-width: 480px">
+                <el-card style="max-width: 740px">
                     <template #header>
                         <div class="card-header">
                             <h4>科学计算软件开发</h4>
@@ -72,7 +73,7 @@
                     <p class="text item">Scikit-learn</p>
                     <p class="text item">Matplotlib</p>
                 </el-card>
-                <el-card style="max-width: 480px">
+                <el-card style="max-width: 740px">
                     <template #header>
                         <div class="card-header">
                             <h4>前端开发</h4>
@@ -84,8 +85,9 @@
                     <p class="text item">Prettify</p>
                     <p class="text item">Three.js</p>
                 </el-card>
+                <el-divider></el-divider>
                 <h4>Learning Experience</h4>
-                <el-card style="max-width: 480px">
+                <el-card style="max-width: 740px">
                     <template #header>
                         <div class="card-header">
                             <h4>Fuzhou University</h4>
@@ -94,7 +96,7 @@
                     <p class="text item">2020-2024</p>
                     <p class="text item">China</p>
                 </el-card>
-                <el-card style="max-width: 480px" v-show="false">
+                <el-card style="max-width: 740px" v-show="false">
                     <template #header>
                         <div class="card-header">
                             <h4>Coventry University</h4>
@@ -104,15 +106,46 @@
                     <p class="text item">UK</p>
                 </el-card>
                 <h4 v-show="false">Working Experience</h4>
+                <el-divider></el-divider>
                 <h4>Links</h4>
-                <ol>
-                    <li> <el-button link style="color: #1196dd;" @click="goTo('./ai_agent.html')">AI Agent
-                            Website</el-button></el-col>
-                    </li>
-                    <li> <el-button link style="color: #1196dd;" @click="goTo('./ai_search.html')">AI Search
-                            Website</el-button></el-col>
-                    </li>
-                </ol>
+                <el-card style="max-width: 740px">
+                    <template #header>
+                        <div class="card-header">
+                            <el-button link style="color: #1196dd;" @click="goTo('./ai_agent.html')">
+                                <h4>AI Agent
+                                    Website</h4>
+                            </el-button>
+                        </div>
+                    </template>
+                    <p class="text item">AI Agent
+                        Website 被设计用于创建AI智能体。
+                        用户需要为AI智能体起名，并输入提示词，然后点击“立即创建”按钮即可创建AI智能体。</p>
+                </el-card>
+                <el-card style="max-width: 740px">
+                    <template #header>
+                        <div class="card-header">
+                            <el-button link style="color: #1196dd;" @click="goTo('./ai_search.html')"><h4>AI Search
+                                Website</h4></el-button>
+                        </div>
+                    </template>
+                    <p class="text item">AI Search
+                        Website 被设计用于创建AI搜索前端。
+                        用户需要输入搜索内容，然后点击“搜索”按钮即可搜索对应内容。
+                        特别地，用户还可以点击“AI生图”、“AI视频”、“AI翻译”和“AI智能体”按钮，更改搜索类别。</p>
+                </el-card>
+                <el-card style="max-width: 740px">
+                    <template #header>
+                        <div class="card-header">
+                            <el-button link style="color: #1196dd;" @click="goTo('./python_online_matplotlib.html')"><h4>Python
+                                Online
+                                Matplotlib</h4></el-button>
+                        </div>
+                    </template>
+                    <p class="text item">Python
+                        Online
+                        Matplotlib 被设计用于在线绘制Matplotlib图表。
+                        用户需要输入Python Matplotlib代码，然后点击“绘图”按钮，即可在网页中得到绘制的图表。</p>
+                </el-card>
             </div>
         </div>
     </div>

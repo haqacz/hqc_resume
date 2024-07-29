@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Python Online Matplotlib</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <!-- 自制的智能体网站 -->
+            <h1 class="search_toolbar_background">Python Online Matplotlib</h1>
+            <div id="center_square">
+                <h4>代码</h4>
+                <el-input class="full-width-button" v-model="textarea" :rows="6" type="textarea"
+                    placeholder="请输入Matplotlib代码"></el-input>
+                <div>&nbsp;</div>
+                <el-button class="full-width-button" type="primary" id="drawButton">绘图</el-button>
+                <h4>绘图结果如下：</h4>
+            </div>
+            <div id="pictureDiv"></div>
+        </div>
+    </div>
+    <script>
+        async function main() {
+            let pyodide = await loadPyodide();
+            await pyodide.loadPackage("matplotlib");
+            $(function () {
+                $('#drawButton').click(function () {
+                    document.pyodideMplTarget = document.getElementById('pictureDiv');
+                    console.log(pyodide.runPython(globalMessage));
+                });
+            });
+
+        };
+        main();
+    </script>
+    <script>
+        let globalMessage;
+        const App = {
+            data() {
+                return {
+                    textarea: `
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+matplotlib.use("module://matplotlib_pyodide.html5_canvas_backend")
+
+plt.close()
+
+np.random.seed(0)
+x = np.random.rand(50) * 100
+y = np.random.rand(50) * 100
+
+plt.figure(figsize=(10, 6))
+plt.scatter(x, y, c='blue', label='Data Points')
+
+plt.title('Scatter Plot Example')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+
+plt.legend()
+
+plt.show()
+  `,
+
+                };
+            },
+            created: function () {
+                globalMessage = this.textarea; // 将Vue实例中的数据赋值给全局变量
+            }
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('picture/bg1.png');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>
