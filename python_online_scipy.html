@@ -1,0 +1,254 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Python Online SciPy</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <!-- 自制的智能体网站 -->
+            <h1 class="search_toolbar_background">Python Online SciPy</h1>
+            <div id="center_square">
+                <h4>代码</h4>
+                <el-input class="full-width-button" v-model="textarea" :rows="6" type="textarea"
+                    placeholder="请输入Matplotlib代码"></el-input>
+                <div>&nbsp;</div>
+                <el-button class="full-width-button" type="primary" id="drawButton" @click="syncResult">绘图</el-button>
+                <h4>统计结果如下：</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <div>概率密度函数</div>
+                        <div id="result_0">0</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <div>概率质量函数</div>
+                        <div id="result_1">0</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <div>T检验</div>
+                        <div id="result_2">0</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <div>P值</div>
+                        <div id="result_3">0</div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <div>均值</div>
+                        <div id="result_4">0</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <div>中值</div>
+                        <div id="result_5">0</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <div>标准差</div>
+                        <div id="result_6">0</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <div>方差</div>
+                        <div id="result_7">0</div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="8">
+                        <div>皮尔逊相关系数</div>
+                        <div id="result_8">0</div>
+                    </el-col>
+                    <el-col :span="8">
+                        <div>夏皮罗-威尔克检验</div>
+                        <div id="result_9">0</div>
+                    </el-col>
+                    <el-col :span="8">
+                        <div>夏皮罗-威尔克P值</div>
+                        <div id="result_10">0</div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="8">
+                        <div>线性回归斜率</div>
+                        <div id="result_11">0</div>
+                    </el-col>
+                    <el-col :span="8">
+                        <div>线性回归截距</div>
+                        <div id="result_12">0</div>
+                    </el-col>
+                    <el-col :span="8">
+                        <div>拟合程度</div>
+                        <div id="result_13">0</div>
+                    </el-col>
+                </el-row>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var originalLog = console.log;
+        var logMessages = [];
+        console.log = function (message) {
+            originalLog.apply(console, arguments);
+            logMessages.push(message);
+        };
+        var result;
+        async function main() {
+            let pyodide = await loadPyodide();
+            await pyodide.loadPackage("scipy");
+            $(function () {
+                $('#drawButton').click(function () {
+                    logMessages = [];
+                    result = pyodide.runPython(globalMessage);
+                    console.log("result:");
+                    console.log(logMessages);
+                    globalResult = logMessages;
+                    $("#result_0").text(logMessages[0]);
+                    $("#result_1").text(logMessages[1]);
+                    $("#result_2").text(logMessages[2]);
+                    $("#result_3").text(logMessages[3]);
+                    $("#result_4").text(logMessages[4]);
+                    $("#result_5").text(logMessages[5]);
+                    $("#result_6").text(logMessages[6]);
+                    $("#result_7").text(logMessages[7]);
+                    $("#result_8").text(logMessages[8]);
+                    $("#result_9").text(logMessages[9]);
+                    $("#result_10").text(logMessages[10]);
+                    $("#result_11").text(logMessages[11]);
+                    $("#result_12").text(logMessages[12]);
+                    $("#result_13").text(logMessages[13]);
+                });
+            });
+
+        };
+        main();
+    </script>
+    <script>
+        let globalMessage;
+        let globalResult;
+        const App = {
+            data() {
+                return {
+                    textarea: `
+import io
+import sys
+import numpy as np
+from scipy import stats
+
+
+# 连续分布 - 正态分布
+mu, sigma = 0, 0.1  # 均值和标准差
+x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+pdf = stats.norm.pdf(x, mu, sigma)
+
+# 离散分布 - 二项分布
+n, p = 10, 0.5  # 试验次数和成功概率
+rv = stats.binom(n, p)
+pmf = rv.pmf(range(n+1))
+
+# 统计检验 - t-检验
+data1 = np.random.randn(100)
+data2 = np.random.randn(100)
+t_statistic, p_value = stats.ttest_ind(data1, data2)
+
+# 描述性统计
+mean = np.mean(data1)
+median = np.median(data1)
+std_dev = np.std(data1)
+variance = np.var(data1)
+
+# 相关性分析 - Pearson 相关系数
+corr, _ = stats.pearsonr(data1, data2)
+
+# 假设检验 - 正态性检验
+shapiro_statistic, shapiro_p_value = stats.shapiro(data1)
+
+# 回归分析 - 简单线性回归
+slope, intercept, r_value, p_value, std_err = stats.linregress(data1, data2)
+
+# 输出结果
+# 概率密度函数
+#print([pdf, pmf, t_statistic, p_value, mean, median, std_dev, variance, 
+#        corr, shapiro_statistic, shapiro_p_value, slope, intercept, r_value**2])
+print("PDF of Normal Distribution:", pdf)
+print("PMF of Binomial Distribution:", pmf)
+print("T-test statistic:", t_statistic)
+print("P-value:", p_value)
+print("Mean:", mean)
+print("Median:", median)
+print("Standard Deviation:", std_dev)
+print("Variance:", variance)
+print("Pearson Correlation Coefficient:", corr)
+print("Shapiro-Wilk Statistic:", shapiro_statistic)
+print("Shapiro-Wilk P-value:", shapiro_p_value)
+print("Linear Regression Slope:", slope)
+print("Linear Regression Intercept:", intercept)
+print("R-squared Value:", r_value**2)
+sys.stdout.flush()
+
+  `,
+
+                };
+            },
+            created: function () {
+                globalMessage = this.textarea; // 将Vue实例中的数据赋值给全局变量
+                globalResult = this.result;
+            }
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('picture/bg1.png');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #center_square {
+            margin-top: -20px;
+            padding-left: 36px;
+            padding-right: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>
