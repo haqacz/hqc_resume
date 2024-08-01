@@ -1,0 +1,1084 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <title>HTML5 CSS</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <h1 class="search_toolbar_background">HTML5 CSS</h1>
+            <div id="center_square">
+                <h4>float,clear</h4>
+                <el-row>
+                    <h5>float:left;</h5>
+                    <div class="big_outline">
+                        <div style="float:left;" class="inner_text solid_rect">text</div>
+                        <div style="float:left;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>float:right;</h5>
+                    <div class="big_outline">
+                        <div style="float:right;" class="inner_text solid_rect">text</div>
+                        <div style="float:right;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>float:none;</h5>
+                    <div class="big_outline">
+                        <div style="float:none;" class="inner_text solid_rect">text</div>
+                        <div style="float:none;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>float:inherit;</h5>
+                    <div class="big_outline">
+                        <div style="float:inherit;" class="inner_text solid_rect">text</div>
+                        <div style="float:inherit;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>float:right;clear:left;</h5>
+                    <div class="big_outline">
+                        <div style="float:right;clear:left;" class="inner_text solid_rect">text</div>
+                        <div style="float:right;clear:left;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <h4>position</h4>
+                <el-row>
+                    <h5>position:static;</h5>
+                    <h5>top:0px;bottom:1px;left:5px;right:10px;</h5>
+                    <div class="big_outline">
+                        <div style="position:static;top:0px;bottom:1px;left:5px;right:10px;" class="inner_text solid_rect">text</div>
+                        <div style="position:static;top:0px;bottom:1px;left:5px;right:10px;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>position:relative;</h5>
+                    <h5>top:0px;bottom:1px;left:5px;right:10px;</h5>
+                    <div class="big_outline">
+                        <div style="position:relative;top:0px;bottom:1px;left:5px;right:10px;" class="inner_text solid_rect">text</div>
+                        <div style="position:relative;top:0px;bottom:1px;left:5px;right:10px;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>position:fixed;</h5>
+                    <h5>top:0px;bottom:1px;left:5px;right:10px;</h5>
+                </el-row>
+                <el-row>
+                    <h5>position:absolute;</h5>
+                    <h5>top:0px;bottom:1px;left:5px;right:10px;</h5>
+                    <div class="big_outline">
+                        <div style="position:absolute;top:0px;bottom:1px;left:5px;right:10px;" class="inner_text solid_rect">text</div>
+                        <div style="position:absolute;top:0px;bottom:1px;left:5px;right:10px;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>position:sticky;</h5>
+                    <h5>top:0px;bottom:1px;left:5px;right:10px;</h5>
+                </el-row>
+                <h4>display</h4>
+                <el-row>
+                    <h5>display:block;</h5>
+                    <div class="big_outline">
+                        <div style="display:block;" class="inner_text solid_rect">text</div>
+                        <div style="display:block;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:inline;</h5>
+                    <div class="big_outline">
+                        <div style="display:inline;" class="inner_text solid_rect">text</div>
+                        <div style="display:inline;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:none;</h5>
+                    <div class="big_outline">
+                        <div style="display:none;" class="inner_text solid_rect">text</div>
+                        <div style="display:none;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:contents;</h5>
+                    <div class="big_outline">
+                        <div style="display:contents;" class="inner_text solid_rect">text</div>
+                        <div style="display:contents;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:flex;</h5>
+                    <div class="big_outline">
+                        <div style="display:flex;" class="inner_text solid_rect">text</div>
+                        <div style="display:flex;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:flow;</h5>
+                    <div class="big_outline">
+                        <div style="display:flow;" class="inner_text solid_rect">text</div>
+                        <div style="display:flow;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:flow-root;</h5>
+                    <div class="big_outline">
+                        <div style="display:flow-root;" class="inner_text solid_rect">text</div>
+                        <div style="display:flow-root;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:grid;</h5>
+                    <div class="big_outline">
+                        <div style="display:grid;" class="inner_text solid_rect">text</div>
+                        <div style="display:grid;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:inline-block;</h5>
+                    <div class="big_outline">
+                        <div style="display:inline-block;" class="inner_text solid_rect">text</div>
+                        <div style="display:inline-block;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:inline-flex;</h5>
+                    <div class="big_outline">
+                        <div style="display:inline-flex;" class="inner_text solid_rect">text</div>
+                        <div style="display:inline-flex;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:inline-grid;</h5>
+                    <div class="big_outline">
+                        <div style="display:inline-grid;" class="inner_text solid_rect">text</div>
+                        <div style="display:inline-grid;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:inline-table;</h5>
+                    <div class="big_outline">
+                        <div style="display:inline-table;" class="inner_text solid_rect">text</div>
+                        <div style="display:inline-table;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:list-item;</h5>
+                    <div class="big_outline">
+                        <div style="display:list-item;" class="inner_text solid_rect">text</div>
+                        <div style="display:list-item;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:math;</h5>
+                    <div class="big_outline">
+                        <div style="display:math;" class="inner_text solid_rect">text</div>
+                        <div style="display:math;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:ruby;</h5>
+                    <div class="big_outline">
+                        <div style="display:ruby;" class="inner_text solid_rect">text</div>
+                        <div style="display:ruby;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:ruby-text;</h5>
+                    <div class="big_outline">
+                        <div style="display:ruby-text;" class="inner_text solid_rect">text</div>
+                        <div style="display:ruby-text;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table;</h5>
+                    <div class="big_outline">
+                        <div style="display:table;" class="inner_text solid_rect">text</div>
+                        <div style="display:table;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-caption;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-caption;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-caption;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-cell;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-cell;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-cell;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-column;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-column;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-column;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-column-group;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-column-group;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-column-group;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-footer-group;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-footer-group;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-footer-group;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-header-group;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-header-group;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-header-group;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-row;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-row;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-row;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:table-row-group;</h5>
+                    <div class="big_outline">
+                        <div style="display:table-row-group;" class="inner_text solid_rect">text</div>
+                        <div style="display:table-row-group;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:inherit;</h5>
+                    <div class="big_outline">
+                        <div style="display:inherit;" class="inner_text solid_rect">text</div>
+                        <div style="display:inherit;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:initial;</h5>
+                    <div class="big_outline">
+                        <div style="display:initial;" class="inner_text solid_rect">text</div>
+                        <div style="display:initial;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:revert;</h5>
+                    <div class="big_outline">
+                        <div style="display:revert;" class="inner_text solid_rect">text</div>
+                        <div style="display:revert;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:revert-layer;</h5>
+                    <div class="big_outline">
+                        <div style="display:revert-layer;" class="inner_text solid_rect">text</div>
+                        <div style="display:revert-layer;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <h5>display:unset;</h5>
+                    <div class="big_outline">
+                        <div style="display:unset;" class="inner_text solid_rect">text</div>
+                        <div style="display:unset;" class="inner_text solid_rect">text</div>
+                    </div>
+                </el-row>
+                <h4>font-size</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>font-size:0px;</h5>
+                        <div style="font-size:0px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>font-size:1px;</h5>
+                        <div style="font-size:1px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>font-size:5px;</h5>
+                        <div style="font-size:5px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>font-size:10px;</h5>
+                        <div style="font-size:10px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>font-variant</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>font-variant:normal;</h5>
+                        <div style="font-variant:normal;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>font-variant:small-caps;</h5>
+                        <div style="font-variant:small-caps;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>font-weight</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>font-weight:normal;</h5>
+                        <div style="font-weight:normal;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>font-weight:bold;</h5>
+                        <div style="font-weight:bold;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>font-style</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>font-style:normal;</h5>
+                        <div style="font-style:normal;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>font-style:italic;</h5>
+                        <div style="font-style:italic;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>font-style:oblique;</h5>
+                        <div style="font-style:oblique;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>text-shadow</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>text-shadow:0px 0px;</h5>
+                        <div style="text-shadow:0px 0px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px;</h5>
+                        <div style="text-shadow:1px 1px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:5px 5px;</h5>
+                        <div style="text-shadow:5px 5px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:10px 10px;</h5>
+                        <div style="text-shadow:10px 10px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px red;</h5>
+                        <div style="text-shadow:1px 1px red;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px blue;</h5>
+                        <div style="text-shadow:1px 1px blue;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px green;</h5>
+                        <div style="text-shadow:1px 1px green;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px yellow;</h5>
+                        <div style="text-shadow:1px 1px yellow;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px 0px;</h5>
+                        <div style="text-shadow:1px 1px 0px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px 1px;</h5>
+                        <div style="text-shadow:1px 1px 1px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px 5px;</h5>
+                        <div style="text-shadow:1px 1px 5px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-shadow:1px 1px 10px;</h5>
+                        <div style="text-shadow:1px 1px 10px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>word-spacing</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>word-spacing:0px;</h5>
+                        <div style="word-spacing:0px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>word-spacing:1px;</h5>
+                        <div style="word-spacing:1px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>word-spacing:5px;</h5>
+                        <div style="word-spacing:5px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>word-spacing:10px;</h5>
+                        <div style="word-spacing:10px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>line-height</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>line-height:0px;</h5>
+                        <div style="line-height:0px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>line-height:1px;</h5>
+                        <div style="line-height:1px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>line-height:5px;</h5>
+                        <div style="line-height:5px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>line-height:10px;</h5>
+                        <div style="line-height:10px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>letter-spacing</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>letter-spacing:0px;</h5>
+                        <div style="letter-spacing:0px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>letter-spacing:1px;</h5>
+                        <div style="letter-spacing:1px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>letter-spacing:5px;</h5>
+                        <div style="letter-spacing:5px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>letter-spacing:10px;</h5>
+                        <div style="letter-spacing:10px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>text-indent</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>text-indent:0px;</h5>
+                        <div style="text-indent:0px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-indent:1px;</h5>
+                        <div style="text-indent:1px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-indent:5px;</h5>
+                        <div style="text-indent:5px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-indent:10px;</h5>
+                        <div style="text-indent:10px;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>text-transform</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>text-transform:none;</h5>
+                        <div style="text-transform:none;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-transform:uppercase;</h5>
+                        <div style="text-transform:uppercase;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-transform:lowercase;</h5>
+                        <div style="text-transform:lowercase;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-transform:capitalize;</h5>
+                        <div style="text-transform:capitalize;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>text-decoration</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>text-decoration:none;</h5>
+                        <div style="text-decoration:none;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-decoration:overline;</h5>
+                        <div style="text-decoration:overline;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-decoration:line-through;</h5>
+                        <div style="text-decoration:line-through;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-decoration:underline;</h5>
+                        <div style="text-decoration:underline;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>direction</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>direction:ltr;</h5>
+                        <div style="direction:ltr;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>direction:rtl;</h5>
+                        <div style="direction:rtl;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>vertical-align</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>vertical-align:top;</h5>
+                        <div style="vertical-align:top;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>vertical-align:middle;</h5>
+                        <div style="vertical-align:middle;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>vertical-align:bottom;</h5>
+                        <div style="vertical-align:bottom;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>text-align</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>text-align:left;</h5>
+                        <div style="text-align:left;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-align:right;</h5>
+                        <div style="text-align:right;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-align:center;</h5>
+                        <div style="text-align:center;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>text-align:justify;</h5>
+                        <div style="text-align:justify;" class="inner_text solid_rect">text</div>
+                    </el-col>
+                </el-row>
+                <h4>outline-offset</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>outline-offset:0px;</h5>
+                        <div style="outline-style:solid;outline-offset:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-offset:1px;</h5>
+                        <div style="outline-style:solid;outline-offset:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-offset:5px;</h5>
+                        <div style="outline-style:solid;outline-offset:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-offset:10px;</h5>
+                        <div style="outline-style:solid;outline-offset:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <h4>outline</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>outline:5px solid red;</h5>
+                        <div style="outline:5px solid red;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>outline-color</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>outline-color:red;</h5>
+                        <div style="outline-style:solid;outline-color:red;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-color:#ff0000;</h5>
+                        <div style="outline-style:solid;outline-color:#ff0000;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-color:rgb(255,0,0);</h5>
+                        <div style="outline-style:solid;outline-color:rgb(255,0,0);" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-color:hsl(0, 100%, 50%);</h5>
+                        <div style="outline-style:solid;outline-color:hsl(0, 100%, 50%);" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <h4>outline-width</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>outline-width:0px;</h5>
+                        <div style="outline-style:solid;outline-width:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-width:1px;</h5>
+                        <div style="outline-style:solid;outline-width:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-width:5px;</h5>
+                        <div style="outline-style:solid;outline-width:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-width:10px;</h5>
+                        <div style="outline-style:solid;outline-width:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <h4>outline-style</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>outline-style:dotted;</h5>
+                        <div style="outline-style:dotted;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-style:dashed;</h5>
+                        <div style="outline-style:dashed;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-style:solid;</h5>
+                        <div style="outline-style:solid;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-style:double;</h5>
+                        <div style="outline-style:double;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>outline-style:groove;</h5>
+                        <div style="outline-style:groove;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-style:ridge;</h5>
+                        <div style="outline-style:ridge;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-style:inset;</h5>
+                        <div style="outline-style:inset;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-style:outset;</h5>
+                        <div style="outline-style:outset;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>outline-style:none;</h5>
+                        <div style="outline-style:none;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>outline-style:hidden;</h5>
+                        <div style="outline-style:hidden;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>min-height, min-width</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>min-height:0px;min-width:0px;</h5>
+                        <div style="min-height:0px;min-width:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>min-height:1px;min-width:1px;</h5>
+                        <div style="min-height:1px;min-width:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>min-height:5px;min-width:5px;</h5>
+                        <div style="min-height:5px;min-width:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>min-height:10px;min-width:10px;</h5>
+                        <div style="min-height:10px;min-width:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <h4>max-height, max-width</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>max-height:0px;max-width:0px;</h5>
+                        <div style="max-height:0px;max-width:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>max-height:1px;max-width:1px;</h5>
+                        <div style="max-height:1px;max-width:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>max-height:5px;max-width:5px;</h5>
+                        <div style="max-height:5px;max-width:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>max-height:10px;max-width:10px;</h5>
+                        <div style="max-height:10px;max-width:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <h4>height, width</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>height:0px;width:0px;</h5>
+                        <div style="height:0px;width:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>height:1px;width:1px;</h5>
+                        <div style="height:1px;width:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>height:5px;width:5px;</h5>
+                        <div style="height:5px;width:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>height:10px;width:10px;</h5>
+                        <div style="height:10px;width:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>height:auto;width:auto;</h5>
+                        <div style="height:auto;width:auto;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>height:50%;width:50%;</h5>
+                        <div style="height:50%;width:50%;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>height:initial;width:initial;</h5>
+                        <div style="height:initial;width:initial;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>height:inherit;width:inherit;</h5>
+                        <div style="height:inherit;width:inherit;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <h4>padding</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>padding:0px;</h5>
+                        <div style="padding:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>padding:1px;</h5>
+                        <div style="padding:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>padding:5px;</h5>
+                        <div style="padding:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>padding:10px;</h5>
+                        <div style="padding:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>padding:0px 1px 5px 10px;</h5>
+                        <div style="padding:0px 1px 5px 10px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>padding:auto;</h5>
+                        <div style="padding:auto;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>padding:inherit;</h5>
+                        <div style="padding:inherit;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>margin</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>margin:0px;</h5>
+                        <div style="margin:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>margin:1px;</h5>
+                        <div style="margin:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>margin:5px;</h5>
+                        <div style="margin:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>margin:10px;</h5>
+                        <div style="margin:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>margin:0px 1px 5px 10px;</h5>
+                        <div style="margin:0px 1px 5px 10px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>margin:auto;</h5>
+                        <div style="margin:auto;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>margin:inherit;</h5>
+                        <div style="margin:inherit;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>border-radius</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-radius:0px;</h5>
+                        <div style="border-radius:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-radius:1px;</h5>
+                        <div style="border-radius:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-radius:5px;</h5>
+                        <div style="border-radius:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-radius:10px;</h5>
+                        <div style="border-radius:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-radius:0px 1px 5px 10px;</h5>
+                        <div style="border-radius:0px 1px 5px 10px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>border</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border:5px solid red;</h5>
+                        <div style="border:5px solid red;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>border-color</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-color:red;</h5>
+                        <div style="border-color:red;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-color:#ff0000;</h5>
+                        <div style="border-color:#ff0000;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-color:rgb(255,0,0);</h5>
+                        <div style="border-color:rgb(255,0,0);" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-color:hsl(0, 100%, 50%);</h5>
+                        <div style="border-color:hsl(0, 100%, 50%);" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-color:red green blue yellow;</h5>
+                        <div style="border-color:red green blue yellow;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>border-width</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-width:0px;</h5>
+                        <div style="border-width:0px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-width:1px;</h5>
+                        <div style="border-width:1px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-width:5px;</h5>
+                        <div style="border-width:5px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-width:10px;</h5>
+                        <div style="border-width:10px;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-width:0px 1px 5px 10px;</h5>
+                        <div style="border-width:0px 1px 5px 10px;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+                <h4>border-style</h4>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-style:dotted;</h5>
+                        <div style="border-style:dotted;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-style:dashed;</h5>
+                        <div style="border-style:dashed;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-style:solid;</h5>
+                        <div style="border-style:solid;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-style:double;</h5>
+                        <div style="border-style:double;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-style:groove;</h5>
+                        <div style="border-style:groove;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-style:ridge;</h5>
+                        <div style="border-style:ridge;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-style:inset;</h5>
+                        <div style="border-style:inset;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-style:outset;</h5>
+                        <div style="border-style:outset;" class="solid_rect"></div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="6">
+                        <h5>border-style:none;</h5>
+                        <div style="border-style:none;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                        <h5>border-style:hidden;</h5>
+                        <div style="border-style:hidden;" class="solid_rect"></div>
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                    <el-col :span="6">
+                    </el-col>
+                </el-row>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    message: "Hello Element Plus",
+                };
+            },
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        .solid_rect {
+            width: 100px;
+            height: 100px;
+            background-color: #f8f8afa1;
+            border-style: solid;
+        }
+
+        .big_outline {
+            width: 300px;
+            height: 300px;
+            background-color: #f8f8af00;
+            border-style: solid;
+        }
+
+        .inner_text {
+            color: black;
+            border-style: none;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('picture/bg1.png');
+            background-position: bottom;
+            background-repeat: repeat-y;
+            background-size: cover;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>
