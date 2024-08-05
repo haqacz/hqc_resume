@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <title>JS Practice</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <h1 class="search_toolbar_background">JS Practice</h1>
+            <div id="center_square">
+                <h4>DOM操作</h4>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/activeElement.html')">
+                    <h4>activeElement</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/all.html')">
+                    <h4>all</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/anchors.html')">
+                    <h4>anchors</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/bgColor.html')">
+                    <h4>bgColor</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/body.html')">
+                    <h4>body</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/characterSet.html')">
+                    <h4>characterSet</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/childElementCount.html')">
+                    <h4>childElementCount</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/children.html')">
+                    <h4>children</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/contentType.html')">
+                    <h4>contentType</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/cookie.html')">
+                    <h4>cookie</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/currentScript.html')">
+                    <h4>currentScript</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/defaultView.html')">
+                    <h4>defaultView</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/dir.html')">
+                    <h4>dir</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/doctype.html')">
+                    <h4>doctype</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/documentElement.html')">
+                    <h4>documentElement</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/documentURI.html')">
+                    <h4>documentURI</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/firstElementChild.html')">
+                    <h4>firstElementChild</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/fonts.html')">
+                    <h4>fonts</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/fullscreen.html')">
+                    <h4>fullscreen</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/fullscreenElement.html')">
+                    <h4>fullscreenElement</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/head.html')">
+                    <h4>head</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/hidden.html')">
+                    <h4>hidden</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/images.html')">
+                    <h4>images</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/lastElementChild.html')">
+                    <h4>lastElementChild</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/lastModified.html')">
+                    <h4>lastModified</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/links.html')">
+                    <h4>links</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/location.html')">
+                    <h4>location</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/readyState.html')">
+                    <h4>readyState</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/referrer.html')">
+                    <h4>referrer</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/scripts.html')">
+                    <h4>scripts</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/scrollingElement.html')">
+                    <h4>scrollingElement</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/timeline.html')">
+                    <h4>timeline</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/title.html')">
+                    <h4>title</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/URL.html')">
+                    <h4>URL</h4>
+                </el-button>
+                <el-button link style="color: #1196dd;" @click="goTo('js_practice/visibilityState.html')">
+                    <h4>visibilityState</h4>
+                </el-button>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    goTo(target) {
+                        window.open(target, '_blank');
+                    }
+                };
+            },
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('picture/bg1.png');
+            background-position: bottom;
+            background-repeat: repeat-y;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>
