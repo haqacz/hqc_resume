@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Data Structure</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <h1 class="search_toolbar_background">Data Structure</h1>
+            <div id="center_square">
+                <h4>数据结构和类型</h4>
+                <div>&nbsp;</div>
+                <div><b>最新的 ECMAScript 标准定义了 8 种数据类型</b></div>
+                <div><b>七种基本数据类型以及对象</b></div>
+                <div>布尔值</div>
+                <div>var 基本数据1 = true;</div>
+                <div>var 基本数据1 = false;</div>
+                <div>&nbsp;</div>
+                <div>null</div>
+                <div>var 基本数据2 = null;</div>
+                <div>&nbsp;</div>
+                <div>undefined</div>
+                <div>var 基本数据3 = undefined;</div>
+                <div>&nbsp;</div>
+                <div>数字</div>
+                <div>var 基本数据4 = 123;</div>
+                <div>&nbsp;</div>
+                <div>任意精度的整数</div>
+                <div>var 基本数据5 = 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111;</div>
+                <div>&nbsp;</div>
+                <div>字符串</div>
+                <div>var 基本数据6 = "123";</div>
+                <div>&nbsp;</div>
+                <div>代表（Symbol，在 ECMAScript 6 中新添加的类型）</div>
+                <div>var 基本数据7 = Symbol("123");</div>
+                <div>&nbsp;</div>
+                <h4>数据类型转换</h4>
+                <div>&nbsp;</div>
+                <div><b>JS是动态类型</b></div>
+                <div>&nbsp;</div>
+                <div><b>var 变量 = "变量";</b></div>
+                <div><b>变量 = 123;</b></div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="result">text</div>
+                <div>&nbsp;</div>
+                <div><b>字符串+数字，会把字符串和数字连接起来</b></div>
+                <div><b>变量 = 变量 + "456";</b></div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="result_add_string">text</div>
+                <div><b>但其他运算符不会这样</b></div>
+                <div><b>变量 = 变量 - "456";</b></div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="result_minus_string">text</div>
+                <div>&nbsp;</div>
+                <div><b>字符串转数字</b></div>
+                <div>&nbsp;</div>
+                <div><b>parseInt(变量)</b></div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="parseInt">text</div>
+                <div><b>parseFloat(变量)</b></div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="parseFloat">text</div>
+                <div>&nbsp;</div>
+                <div><b>数组字面量</b></div>
+                <div><b>[1, 2, 3]</b></div>
+                <div><b>布尔字面量</b></div>
+                <div><b>true和false</b></div>
+                <div><b>数字字面量</b></div>
+                <div><b>123</b></div>
+                <div><b>整数字面量</b></div>
+                <div><b>123</b></div>
+                <div><b>0123 0o123</b></div>
+                <div><b>0x123</b></div>
+                <div><b>0b101</b></div>
+                <div><b>浮点数字面量</b></div>
+                <div><b>0.123</b></div>
+                <div><b>.123</b></div>
+                <div><b>0.123E+3</b></div>
+                <div><b>.123e+3</b></div>
+                <div><b>对象字面量</b></div>
+                <div><b>增强的对象字面量</b></div>
+                <div><b>正则表达式字面量</b></div>
+                <div><b>var re = /ab+c/;</b></div>
+                <div><b>字符串字面量</b></div>
+                <div><b>'单引号'</b></div>
+                <div><b>"双引号"</b></div>
+                <div><b>模板字面量</b></div>
+                <div><b>`反引号`</b></div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var 变量 = "变量";
+        变量 = 123;
+        变量 = 变量 + "456";
+        变量 = 变量 - "456";
+        async function main() {
+            $(function () {
+                $("#result").text(变量);
+                $("#result_add_string").text(变量);
+                $("#result_minus_string").text(变量);
+                $("#parseInt").text(parseInt(变量));
+                $("#parseFloat").text(parseFloat(变量));
+            });
+        };
+        main();
+    </script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    message: "Hello Element Plus",
+                };
+            },
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('../../picture/bg1.png');
+            background-position: bottom;
+            background-repeat: repeat-y;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>

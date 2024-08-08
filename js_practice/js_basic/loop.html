@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Loop</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <h1 class="search_toolbar_background">Loop</h1>
+            <div id="center_square">
+                <h4>循环与迭代</h4>
+                <div>&nbsp;</div>
+                <div><b>for 语句</b></div>
+                <div>for (i = 0; i &lt; 5; i++) {
+                    console.log(i);
+                  }</div>
+                <div><b>do...while 语句</b></div>
+                <div>do {
+                    i += 1;
+                    console.log(i);
+                  } while (i &lt; 5);</div>
+                <div><b>while 语句</b></div>
+                <div>while (n &lt; 3) {
+                    n++;
+                    x += n;
+                  }</div>
+                <div><b>label 语句</b></div>
+                <div>outPoint: for (var i = 0; i &lt; 10; i++) {
+                    for (var j = 0; j &lt; 10; j++) {
+                      if (i == 5 && j == 5) {
+                        break outPoint; 
+                      }
+                      num++;
+                    }
+                  }</div>
+                <div><b>break 语句</b></div>
+                <div>break;</div>
+                <div><b>continue 语句</b></div>
+                <div>continue;</div>
+                <div><b>for...in 语句</b></div>
+                <div>for (var i in [1,2,3]) {
+                    console.log(i);
+                  }</div>
+                <div><b>for...of 语句</b></div>
+                <div>for (var i of [1,2,3]) {
+                    console.log(i);
+                }</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    message: "Hello Element Plus",
+                };
+            },
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('../../picture/bg1.png');
+            background-position: bottom;
+            background-repeat: repeat-y;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>

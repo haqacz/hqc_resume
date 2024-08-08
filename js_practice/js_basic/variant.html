@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Variant</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <h1 class="search_toolbar_background">Variant</h1>
+            <div id="center_square">
+                <h4>变量</h4>
+                <div>&nbsp;</div>
+                <div><b>创建变量</b></div>
+                <div><b>全局变量</b></div>
+                <div>var 变量 = "变量";</div>
+                <div>&nbsp;</div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="result">text</div>
+                <div>&nbsp;</div>
+                <div><b>局部变量</b></div>
+                <div>let 变量_let = "变量_let";</div>
+                <div>&nbsp;</div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="result_let">text</div>
+                <div>&nbsp;</div>
+                <div><b>（局部）常量</b></div>
+                <div>const 变量_const = "变量_const";</div>
+                <div>&nbsp;</div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="变量_const">text</div>
+                <div>&nbsp;</div>
+                <div><b>变量赋值</b></div>
+                <div>&nbsp;</div>
+                <div><b>变量 = "新的值";</b></div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="变量_new">text</div>
+                <div>&nbsp;</div>
+                <div><b>注释的写法</b></div>
+                <div>// 注释</div>
+                <div>/* 多行注释 */</div>
+                <div>&nbsp;</div>
+                <div><b>变量提升</b></div>
+                <div><b>var变量可以稍后再声明</b></div>
+                <div>&nbsp;</div>
+                <div><b>用window对象访问全局变量</b></div>
+                <div><b>window.变量</b></div>
+                <div><b>变量的值是多少？</b></div>
+                <div id="变量_new_window">text</div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var 变量 = "变量";
+        let 变量_let = "变量_let";
+        const 变量_const = "变量_const";
+        async function main() {
+            $(function () {
+                $("#result").text(变量);
+                $("#result_let").text(变量_let);
+                $("#变量_const").text(变量_const);
+                变量 = "新的值";
+                $("#变量_new").text(变量);
+                $("#变量_new_window").text(window.变量);
+            });
+        };
+        main();
+    </script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    message: "Hello Element Plus",
+                };
+            },
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('../../picture/bg1.png');
+            background-position: bottom;
+            background-repeat: repeat-y;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Function</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="virtual_square">
+            <h1 class="search_toolbar_background">Function</h1>
+            <div id="center_square">
+                <h4>函数</h4>
+                <div>&nbsp;</div>
+                <div><b>函数定义</b></div>
+                <div>function 函数名(参数列表) {
+                    函数语句;
+                    return 函数返回值;
+                  }</div>
+                <div><b>函数表达式</b></div>
+                <div>const square = function 函数名(参数列表) {
+                    函数语句;
+                    return 函数返回值;
+                }</div>
+                <div><b>调用函数</b></div>
+                <div>函数名(参数列表);</div>
+                <div><b>函数提升</b></div>
+                <div>先调用后定义</div>
+                <div><b>函数作用域</b></div>
+                <div>定义在全局域中的函数可以访问所有定义在全局域中的变量。
+                    在另一个函数中定义的函数也可以访问在其父函数中定义的所有变量和父函数有权访问的任何其他变量。</div>
+                <div><b>作用域和函数栈</b></div>
+                <div>一个函数可以指向并调用自身。有三种方法可以达到这个目的：</div>
+                <div>函数名</div>
+                <div>arguments.callee</div>
+                <div>作用域内一个指向该函数的变量名</div>
+                <div><b>使用 arguments 对象</b></div>
+                <div>函数的实际参数会被保存在一个类似数组的 arguments 对象中</div>
+                <div>const square = function 函数名(一个参数名) {
+                    arguments[0];
+                    arguments[1];
+                    arguments[2];
+                }</div>
+                <div><b>参数默认值</b></div>
+                <div>const square = function 函数名(参数名 = 参数默认值) {
+                    // 如果没传参数，则参数的值就等于默认值
+                }</div>
+                <div><b>剩余参数</b></div>
+                <div>const square = function 函数名(参数名1， ...参数2) {
+                    // 参数2代表一个或多个参数
+                }</div>
+                <div><b>箭头函数</b></div>
+                <div>(参数名) => 返回值;</div>
+                <div><b>预定义函数</b></div>
+                <div>eval()</div>
+                <div>isFinite()</div>
+                <div>isNaN()</div>
+                <div>parseFloat()</div>
+                <div>parseInt()</div>
+                <div>decodeURI()</div>
+                <div>decodeURIComponent()</div>
+                <div>encodeURI()</div>
+                <div>encodeURIComponent()</div>
+                <div>escape()</div>
+                <div>unescape()</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    message: "Hello Element Plus",
+                };
+            },
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
+    <style>
+        .search_toolbar_background {
+            background-color: #ffffffa1;
+        }
+
+        #virtual_square {
+            display: flex;
+            flex-direction: column;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            background-image: url('../../picture/bg1.png');
+            background-position: bottom;
+            background-repeat: repeat-y;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #center_square {
+            padding: 36px;
+            width: 800px;
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .full-width-button {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .el-input__inner {
+            border-radius: 10px;
+            /* 你可以根据需要更改这个值 */
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</body>
+
+</html>
